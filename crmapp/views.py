@@ -22,3 +22,6 @@ def logout_user(request):
     logout(request)
     messages.success(request, "You logged out")
     return redirect('home')
+
+def register(request):
+    return render(request, 'register.html', {})
