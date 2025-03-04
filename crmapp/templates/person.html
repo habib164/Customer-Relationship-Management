@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">
+                {{ individual_record.first_name }}
+                {{ individual_record.last_name }}
+            </h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                <strong>Email: </strong>{{ individual_record.email }}
+            </p>
+
+            <p class="card-text">
+                <strong>Phone Number: </strong>{{ individual_record.phone }}
+            </p>
+
+            <p class="card-text">
+                <strong>Address: </strong>{{ individual_record.address }}
+            </p>
+
+            <p class="card-text">
+                <strong>City: </strong>{{ individual_record.city }}
+            </p>
+
+            <p class="card-text">
+                <strong>State: </strong>{{ individual_record.state }}
+            </p>
+
+            <p class="card-text">
+                <strong>Zipcode: </strong>{{ individual_record.zipcode }}
+            </p>
+
+            <p class="card-text">
+                <strong>Date Created: </strong>{{ individual_record.date_created }}
+            </p>
+
+            <p class="card-text">
+                <strong>ID: </strong>{{ individual_record.id }}
+            </p>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+    <a class="btn btn-secondary" href="{% url 'home' %}">Back</a>
+    <a class="btn btn-danger" href="{% url 'delete' individual_record.id %}">Delete</a>
+    <a class="btn btn-success" href="{% url 'update' individual_record.id %}">Update</a>
+
+{% endblock %}

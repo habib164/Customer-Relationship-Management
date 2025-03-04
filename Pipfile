@@ -8,6 +8,7 @@ django = "*"
 mysql = "*"
 mysqlclient = "*"
 mysql-connector-python = "*"
+django-phonenumber-field = {extras = ["phonenumberslite"], version = "*"}
 
 [dev-packages]
 
